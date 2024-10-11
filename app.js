@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Display the generated text to the user
-        responseElement.innerText = data.response;
+        responseElement.innerText = data.response || 'No response generated';
       } catch (error) {
         // Handle any errors
         responseElement.innerText = 'Error generating response';

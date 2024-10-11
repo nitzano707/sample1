@@ -5,7 +5,8 @@ exports.handler = async function (event, context) {
     // Set the Hugging Face API endpoint and model
     // const API_URL = 'https://api-inference.huggingface.co/models/bigscience/bloom';
     // const API_URL = 'https://api-inference.huggingface.co/models/EleutherAI/gpt-j-6B';
-    const API_URL = 'https://api-inference.huggingface.co/models/distilgpt2';
+    // const API_URL = 'https://api-inference.huggingface.co/models/distilgpt2';
+    const API_URL = 'https://api-inference.huggingface.co/models/fluxai/flux-prompt-enhance';
 
     // Set the Hugging Face API token (retrieve it from your environment variables)
     const API_TOKEN = process.env.HUGGING_FACE_API_KEY;

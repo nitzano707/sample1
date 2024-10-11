@@ -42,7 +42,7 @@ exports.handler = async function (event, context) {
     }
 
     // Extract the generated text from the response
-    const generatedText = responseData.generated_text;
+    const generatedText = responseData.generated_text || responseData[0]?.generated_text;
 
     // Return the generated response
     return {

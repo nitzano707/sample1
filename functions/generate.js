@@ -3,8 +3,6 @@ const fetch = require('node-fetch');
 exports.handler = async function (event, context) {
   try {
     // Set the Hugging Face API endpoint and model
-    // const API_URL = 'https://api-inference.huggingface.co/models/EleutherAI/gpt-j-6B';
-    // const API_URL = 'https://api-inference.huggingface.co/models/gpt2';
     const API_URL = 'https://api-inference.huggingface.co/models/bigscience/bloom';
 
     // Set the Hugging Face API token (retrieve it from your environment variables)

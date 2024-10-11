@@ -3,12 +3,7 @@ const fetch = require('node-fetch');
 exports.handler = async function (event, context) {
   try {
     // Set the Hugging Face API endpoint and model
-    // const API_URL = 'https://api-inference.huggingface.co/models/bigscience/bloom';
-    // const API_URL = 'https://api-inference.huggingface.co/models/EleutherAI/gpt-j-6B';
-    // const API_URL = 'https://api-inference.huggingface.co/models/distilgpt2';
-    // const API_URL = 'https://api-inference.huggingface.co/models/microsoft/DialoGPT-medium';
     const API_URL = 'https://api-inference.huggingface.co/models/gokaygokay/Flux-Prompt-Enhance';
-    
 
     // Set the Hugging Face API token (retrieve it from your environment variables)
     const API_TOKEN = process.env.HUGGING_FACE_API_KEY;
@@ -19,7 +14,12 @@ exports.handler = async function (event, context) {
 
     // Prepare the request payload
     const payload = {
-      inputs: userInput,
+      inputs: `enhance prompt: ${userInput}`,
+      parameters: {
+        max_length: 256,
+        temperature: 0.7, // Affects the level of randomness in the response
+        top_p: 0.9 // Controls diversity in the generated text
+      },
     };
 
     // Define the headers for the API request

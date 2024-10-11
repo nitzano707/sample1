@@ -4,7 +4,8 @@ exports.handler = async function (event, context) {
   try {
     // Set the Hugging Face API endpoint and model
     // const API_URL = 'https://api-inference.huggingface.co/models/gokaygokay/Flux-Prompt-Enhance';
-    const API_URL = 'https://api-inference.huggingface.co/models/meta-llama/Llama-3.1-8B-Instruct';
+    // const API_URL = 'https://api-inference.huggingface.co/models/meta-llama/Llama-3.1-8B-Instruct';
+       const API_URL = 'https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B';
 
     // Set the Hugging Face API token (retrieve it from your environment variables)
     const API_TOKEN = process.env.HUGGING_FACE_API_KEY;
